@@ -45,12 +45,27 @@ console.log(carrinho.map(valorTotalDosProdutos));
 //-------------------------------------------------------------------------------------------------------
 // Resolução do professor: 
 
-const getNome = item => item.nome;
-console.log(carrinho.map(getNome));
+// const getNome = item => item.nome;
+// console.log(carrinho.map(getNome));
 
-const getTotal = item => item.qtde * item.preco;
-const totais = carrinho.map(getTotal);
-console.log(totais);
+// const getTotal = item => item.qtde * item.preco;
+// const totais = carrinho.map(getTotal);
+// console.log(totais);
 //-------------------------------------------------------------------------------------------------------
 
+// Entendendo como o MAP funciona - Criando o próprio MAP
+Array.prototype.meuMap = function(fn) {
+    const novoArray = []
 
+    for(let i = 0; i < this.length; i++) {
+        novoArray.push(fn(this[i], i, this));
+    }
+    return novoArray;
+}
+
+const getNome = item => item.nome;
+console.log(carrinho.meuMap(getNome));
+
+const getTotal = item => item.qtde * item.preco;
+const totais = carrinho.meuMap(getTotal);
+console.log(totais);
