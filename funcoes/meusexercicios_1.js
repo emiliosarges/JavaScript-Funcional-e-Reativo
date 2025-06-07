@@ -53,10 +53,3 @@ console.log(celsius.map(temperaturaEmCelsius => (temperaturaEmCelsius * 9/5) + 3
 // [1, 2, 3] => [{valor: 1}, {valor: 2}, {valor: 3}]
 const ids = [1, 2, 3];
 console.log(ids.map(id => ({valor: id})));
-
-
-
-
-
-
-
