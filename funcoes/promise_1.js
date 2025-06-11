@@ -1,22 +1,11 @@
-let p = new Promise(function(cumprirPromessa) {
-    cumprirPromessa(['Emilio', 'Luiza', 'Luilio', 'Vovo Anibal']);
-});
+const primeiroElemento = arrayOuString => arrayOuString[0];
+const letraMinuscula = (letra) => letra.toLowerCase();
 
-function primeiroElemento(array) {
-    return array[0];
-}
-
-function primeiraLetra(string) {
-    return string[0];
-}
-
-function letraMinuscula(letra) { 
-    return letra.toLowerCase();
-}
-
-p
+new Promise(function(resolve) {
+    resolve(['Emilio', 'Luiza', 'Luilio', 'Vovo Anibal']);
+})
     .then(primeiroElemento)
-    .then(primeiraLetra)
+    .then(primeiroElemento)
     .then(letraMinuscula)
     .then(console.log);
     
