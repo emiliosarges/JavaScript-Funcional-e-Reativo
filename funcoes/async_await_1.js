@@ -20,4 +20,4 @@ function esperarPor(tempo = 2000) {
         console.log('Async/Await 3...')
     }
 
-    executar()
+executar()
